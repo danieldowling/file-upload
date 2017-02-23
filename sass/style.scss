@@ -1,0 +1,257 @@
+$lightgrey: #e0e5ed;
+$blue: #4592dd;
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-size: inherit;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #eef1f6;
+}
+
+h1 {
+  color: $blue;
+  margin-top: 44px;
+  font-size: 28px;
+}
+
+p {
+  margin-top: 10px;
+  color: grey;
+  font-size: 12px;
+}
+
+span {
+  text-decoration: none;
+  cursor: pointer;
+  color: $blue;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: $blue;
+  background-image: url('../images/cloud.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 3px solid #387fc3;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: center;
+  height: 48px;
+  width: 100%;
+  background-color: $lightgrey;
+}
+
+.sub-header li {
+  width: 14%;
+  padding-top: 10px;
+  margin: 0 10px 0 10px;
+  list-style-type: none;
+  color: $blue;
+  text-align: center;
+  line-height: 30px;
+  &.active {
+    border-bottom: 2px solid $blue;
+    border-width: 3px;
+    font-weight: bold;
+    cursor: default;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.file-uploader {
+  display: flex;
+  flex-direction: column;
+  margin: 80px auto;
+  width: 40%;
+  min-width: 500px;
+  height: 480px;
+  border-radius: 5px;
+  border: 2px solid $lightgrey;
+  background-color: white;
+}
+
+.upload {
+  display: none;
+  &.active {
+    display: block;
+  }
+  input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+  }
+}
+
+.button {
+  font-size: 14px;
+  border: 2px solid $blue;
+  border-radius: 2px;
+  padding: 15px 50px 15px 50px;
+  color: white;
+  background-color: $blue;
+  margin-top: 185px;
+  margin-bottom: 12px;
+  &:hover {
+    background-color: #387fc3;
+    cursor: pointer;
+  }
+}
+
+.upload-file button {
+  border: 2px solid $blue;
+  border-radius: 2px;
+  padding: 15px 50px 15px 50px;
+  color: white;
+  background-color: $blue;
+  margin-top: 60px;
+  margin-bottom: 54px;
+}
+
+#progress-bar {
+  width: 76%;
+  position: relative;
+  background-color: #d0daec;
+  border-radius: 5px;
+  margin-top: 56px;
+}
+
+#upload-progress {
+  width: 1%;
+  height: 40px;
+  background-color: #84a6c7;
+  border-radius: 5px;
+  li{
+    background: red;
+  }
+}
+
+#file-name {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 40px;
+  color: white;
+  white-space: nowrap;
+}
+
+.upload-file, .select-file, .file-loading {
+  width: 74%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px auto;
+  height: 360px;
+  border-bottom: 1px solid $blue;
+  &.active {
+    display: block;
+  }
+}
+
+.select-file {
+  background-image: url('../images/arrow.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  p {
+    font-size: 12px;
+    color: #c1c8d0;
+  }
+}
+
+.my-files {
+  display: none;
+  &.active {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+  }
+  h1 {
+    border-bottom: 2px solid #d0daec;
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+  }
+  ul {
+    list-style-type: none;
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+  }
+}
+
+#uploaded-files {
+  width: 100%;
+}
+
+.saved-files {
+  list-style-type: none;
+  height: 24px;
+  color: #c8c8d0;
+  background-color: #f9fbff;
+  margin-top: 20px;
+  padding: 20px 0px 20px 0px;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  font-size: 18px;
+  text-align: center;
+  z-index: 0;
+  &:hover {
+    background-color: #eef0f5;
+    color: #c8c8d0;
+  }
+}
+
+.my-file-delete {
+  float: right;
+  color: white;
+  background-color: #c0bfc5;
+  border: 2px solid #c0bfc5;
+  border-radius: 34px;
+  margin: 0px 60px 0px 0px !important;
+  padding: 1px 5px 1px 5px;
+  font-size: 14px;
+  position: relative;
+  z-index: 10000000;
+  &:hover {
+    background-color: #de6f6f !important;
+    border: 2px solid #de6f6f !important;
+  }
+}
+
+#new-file-counter {
+  width: 20px;
+  margin-left: -14px;
+  margin-top: 8px !important;
+  line-height: 2px;
+  background-color: #de6f6f;
+  color: white;
+  height: 10px;
+  border-radius: 20px;
+}
+
+.remove-button {
+  color: white !important;
+  border: 2px solid #c0bfc5 !important;
+  background-color: #c0bfc5 !important;
+  margin: 13px 14px 0px 0px !important;
+  padding: 0px 2px 0px 2px !important;
+  border-radius: 10px !important;
+  float: right;
+  font-size: 10px;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    background-color: #de6f6f !important;
+    border: 2px solid #de6f6f !important;
+  }
+}

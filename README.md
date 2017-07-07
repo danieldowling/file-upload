@@ -1,3 +1,5 @@
+Installation
+
 1) Run the "npm install” command in the terminal to install dependencies.
 	-While developing this project I used Gulp to assist me with a few processes. I have included the package.json file so simply running the "npm install” command through the console will download the required dependencies.
 
